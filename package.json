@@ -1,0 +1,25 @@
+{
+  "name": "newapi",
+  "version": "1.0.0",
+  "description": "Universal API for Blockchains by Newfoundation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newfound8ion/NewAPI.git"
+  },
+  "keywords": [
+    "blockchain",
+    "api",
+    "social",
+    "graph"
+  ],
+  "author": "Newfoundation",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/newfound8ion/NewAPI/issues"
+  },
+  "homepage": "https://github.com/newfound8ion/NewAPI#readme"
+}
