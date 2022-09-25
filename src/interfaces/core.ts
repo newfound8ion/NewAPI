@@ -1,33 +1,28 @@
-
-
-
 /**
- * A General blockchain identity. Can be either with name or with public key. 
+ * A General blockchain identity. Can be either with name or with public key.
  * The private key is only required, when it acts as issuer of a transaction
  */
- export interface IIdentity {
-    name?: string,
-    pubKey?: string,
+export interface IIdentity {
+  name?: string;
+  pubKey?: string;
 }
 
 /**
  * IIssuer is the issuer of a authenticated transaction
  */
 export interface IIssuer extends IIdentity {
-    privKey: string
+  privKey: string;
 }
 
-export interface IReciever extends IIdentity {
-
-}
+export type IReciever = IIdentity;
 
 /**
  * Interface for creating new accounts
- * TODO: Active keys are not available in other blockchains, will we    
+ * TODO: Active keys are not available in other blockchains, will we
  */
 export interface INewAccount extends IIdentity {
-    pubKey: string,
-    pubActiveKey: string,
+  pubKey: string;
+  pubActiveKey: string;
 }
 
 /**
@@ -35,29 +30,27 @@ export interface INewAccount extends IIdentity {
  * The Token is optional, as often the transaction already requires a specific token.
  */
 export interface IAmount {
-    amount: number,
-    token?: string
+  amount: number;
+  token?: string;
 }
 
-
 export interface ITxResult {
-    TxID: string,
+  TxID: string;
 }
 
 export interface IBalanceResult {
-    amount: number,
-    token: string
+  amount: number;
+  token: string;
 }
 
 /**
  * Identifies Blockchain specific options for action handling
  */
-export interface IBCOptions {
-
-}
+/* eslint-disable  @typescript-eslint/no-empty-interface */
+export interface IBCOptions {}
 
 export enum ResourceType {
-    RAM,
-    CPU,
-    NET
+  RAM,
+  CPU,
+  NET,
 }
